@@ -30,11 +30,34 @@
     ></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
     <script src="../php-dischi-json/script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
     <title>PHP Dischi JSON</title>
   </head>
   <body>
     <div id="app">
-      <h1 class="text-center text-primary">{{ music[0].name }}</h1>
+      <div class="background">
+        <header>
+          <img src="/img/logo.svg" alt="" class="logo" />
+        </header>
+        <main class="py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-4" v-for="card in music" :key="card">
+                <div class="card pb-3 mb-4">
+                  <div class="img-container">
+                    <img :src="`./${card.photo}`" :alt="card.photo" />
+                  </div>
+                  <div class="text-container">
+                    <div class="title fw-bolder mb-2">{{ card.name }}</div>
+                    <div class="artist mb-1">{{ card.artist }}</div>
+                    <div class="date fw-bold mb-1">{{ card.date }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
   </body>
 </html>
