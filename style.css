@@ -7,8 +7,9 @@ header {
   height: 5rem;
 }
 
-header img {
-  height: 3rem;
+header .logo {
+  height: 4.8rem;
+  padding: 1rem 0;
 }
 
 .card {
@@ -17,8 +18,8 @@ header img {
   cursor: pointer;
 }
 
-.card:hover img {
-  transform: scale(1.1);
+.no-modal:hover {
+  transform: scale(1.05);
 }
 
 .card .img-container {
@@ -34,4 +35,26 @@ header img {
 
 .card .text-container {
   text-align: center;
+}
+
+.modal-dialog {
+  opacity: 0.9;
+}
+
+.img_modal {
+  opacity: 1;
+}
+
+.my_header {
+  background-color: #112030;
+}
+
+.modal-body {
+  background-color: #112030;
+}
+
+.modal-body .card {
+  color: white;
+  background-color: #112030;
+  width: 30rem;
 }
